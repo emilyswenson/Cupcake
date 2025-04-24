@@ -1,0 +1,37 @@
+body{
+  background-color:#ffd6cc;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+div {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(239, 211, 211, 0.1); /* Soft shadow effect */
+}
+
+/* Title div styling */
+.title {
+  background-color: #ffffff; /* Soft pink background */
+  border: 2px solid #503f3f; /* Light gray border */
+  text-align: center; /* Center the title text */
+  color: #503f3f; /* Dark gray text color */
+}
+
+/* Words div styling */
+.words {
+  background-color: #ffffff; /* White background */
+  border: 2px solid #503f3f; /* Light gray border */
+  color: #503f3f; /* Dim gray text color */
+  font-family: 'Arial, sans-serif'; /* Font family for styling */
+}
+
+/* Content div styling */
+.content {
+  background-color: #ffd6cc; /* Warm pastel pink background */
+  border: 2px solid #503f3f; /* Light gray border */
+  text-align: center; /* Center the content text */
+  color: #4f4f4f; /* Medium gray text color */
+  font-family: 'Arial, sans-serif'; /* Font family for styling */
+}

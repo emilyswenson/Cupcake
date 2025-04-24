@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cupcake Flavor Generator</title>
+    <style>
+        /* Style the body */
+        body {
+            background-color: #ffd6cc;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /* Shared styles for divs */
+        div {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(239, 211, 211, 0.1); /* Soft shadow effect */
+        }
+
+        /* Title div styling */
+        .title {
+            background-color: #ffffff; /* Soft pink background */
+            border: 2px solid #503f3f; /* Light gray border */
+            text-align: center; /* Center the title text */
+            color: #503f3f; /* Dark gray text color */
+        }
+
+        /* Words div styling */
+        .words {
+            background-color: #ffffff; /* White background */
+            border: 2px solid #503f3f; /* Light gray border */
+            color: #503f3f; /* Dim gray text color */
+            font-family: 'Arial, sans-serif'; /* Font family for styling */
+            text-align: center; /* Center the results */
+        }
+
+        /* Content div styling */
+        .content {
+            background-color: #ffffff; /* Warm pastel pink background */
+            border: 2px solid #503f3f; /* Light gray border */
+            text-align: center; /* Center the content text */
+            color: #4f4f4f; /* Medium gray text color */
+            font-family: 'Arial, sans-serif'; /* Font family for styling */
+        }
+
+        /* Style the button */
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: 2px solid #503f3f;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #503f3f;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffe4e1; /* Slightly pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Random Cupcake Flavor Generator</h1>
+    </div>
+    <div class="content">
+        <p>Click the button below to generate a unique cupcake flavor and frosting combination!</p>
+        <button id="generate-btn">Generate Cupcake</button>
+        <div id="result" class="words"></div>
+        <a href="index.html">Resume</a>
+    </div>
+    <script>
+        // Array of cupcake flavors
+        const cupcakeFlavors = [
+            "Vanilla Bean", "Chocolate Fudge", "Red Velvet", "Lemon Zest", "Strawberry Shortcake",
+            "Carrot Cake", "Coconut Cream", "Marble Swirl", "Coffee Mocha", "Salted Caramel",
+            "Peanut Butter Cup", "Cookies and Cream", "Mint Chocolate Chip", "S'mores", "Funfetti",
+            "Black Forest Cherry", "Tiramisu", "Raspberry Lemonade", "Blueberry Bliss", "Orange Creamsicle",
+            "Pineapple Coconut", "Mango Tango", "Peach Cobbler", "Cherry Almond", "Apple Cinnamon",
+            "Chocolate Banana", "Cinnamon Roll", "Cheesecake Swirl", "Maple Bacon", "Pumpkin Spice",
+            "Cranberry Orange", "Gingerbread", "Matcha Green Tea", "Chai Latte", "Lavender Honey",
+            "Lemon Basil", "Bourbon Maple", "Champagne", "Dark Chocolate Chili", "Pistachio Almond",
+            "Blackberry Sage", "Earl Grey Tea", "Honeycomb Delight", "Basil Strawberry", "Spiced Sweet Potato",
+            "Olive Oil Rosemary", "Red Wine and Raspberry", "Passionfruit Bliss", "Key Lime Pie", "Tahitian Vanilla"
+        ];
+
+        // Array of frosting flavors
+        const frostingFlavors = [
+            "Vanilla Buttercream", "Chocolate Ganache", "Cream Cheese Frosting", "Swiss Meringue Buttercream",
+            "Italian Meringue Buttercream", "Salted Caramel Frosting", "Peanut Butter Frosting", "Strawberry Buttercream",
+            "Coffee Buttercream", "Lemon Curd Frosting", "Raspberry Swirl Frosting", "Blueberry Frosting",
+            "Orange Zest Frosting", "Blackberry Frosting", "Mango Buttercream", "Pineapple Frosting",
+            "Lime Cream Frosting", "Passionfruit Frosting", "Peach Frosting", "Cookies and Cream Frosting",
+            "Fudge Frosting", "S'mores Frosting", "Cheesecake Frosting", "Turtle Frosting",
+            "Nutella Frosting", "White Chocolate Frosting", "Pumpkin Spice Frosting", "Maple Pecan Frosting",
+            "Peppermint Mocha Frosting", "Sweet Potato Marshmallow Frosting", "Matcha Frosting", "Chai Frosting",
+            "Earl Grey Tea Frosting", "Lavender Honey Frosting", "Lemon Basil Frosting", "Bourbon Buttercream",
+            "Honeycomb Frosting", "Black Forest Frosting", "Raspberry Rose Frosting", "Champagne Frosting",
+            "Coconut Lime Frosting", "Guava Frosting", "Dragonfruit Frosting", "Papaya Frosting", "Piña Colada Frosting",
+            "Dark Chocolate Chili Frosting", "Salted Honey Frosting", "Basil Lime Frosting", "Ricotta Lemon Frosting",
+            "Spiced Sweet Potato Frosting"
+        ];
+
+        // Button functionality
+        document.getElementById("generate-btn").addEventListener("click", () => {
+            const randomCupcake = cupcakeFlavors[Math.floor(Math.random() * cupcakeFlavors.length)];
+            const randomFrosting = frostingFlavors[Math.floor(Math.random() * frostingFlavors.length)];
+            document.getElementById("result").innerHTML = `<p><strong>Cupcake Flavor:</strong> ${randomCupcake}<br><strong>Frosting:</strong> ${randomFrosting}</p>`;
+        });
+
+    </script>
+</body>

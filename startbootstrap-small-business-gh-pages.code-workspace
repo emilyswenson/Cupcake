@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../is201finalproject"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "startbootstrap-small-business-gh-pages"
+	}
+}
